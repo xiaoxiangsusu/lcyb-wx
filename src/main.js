@@ -3,11 +3,14 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import '@/assets/css/reset.css'
+import YDUI from 'vue-ydui'
+import 'vue-ydui/dist/ydui.rem.css';
 import '@/assets/css/common.less'
+import '@/assets/css/style.less'
 import '@/assets/js/rem'
 import '@/assets/js/utils'
 
+Vue.use(YDUI)
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
@@ -15,5 +18,6 @@ new Vue({
   el: '#app',
   router,
   template: '<App/>',
-  components: { App }
+  components: { App },
+  render: h => h(App)
 })
