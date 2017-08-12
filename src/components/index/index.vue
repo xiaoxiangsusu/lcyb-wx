@@ -2,8 +2,8 @@
   <div class="lc_box">
     <div class="lc_container">
       <div class="lc_container_box clear" style="margin-bottom: 0">
-        <!--<img src="../../assets/image/logo.png" class="logo lf">-->
-        <img src="" class="logo lf">
+        <img src="../../assets/image/logo.png" class="logo lf">
+        <!--<img src="" class="logo lf">-->
         <router-link class="index_search rt" to="/search">
           <i></i>
           <span>搜索视频</span>
@@ -71,7 +71,7 @@
         </ul>
       </div>
     </div>
-    <lc_footer></lc_footer>
+    <lc_footer :state=1></lc_footer>
   </div>
 </template>
 <script>

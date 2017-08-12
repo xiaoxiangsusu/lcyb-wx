@@ -141,26 +141,161 @@
   }
   //搜索页面
   &.search_box{
+    margin-bottom: 0;
     .search{
-      position: relative;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 20;
+      width: 100%;
+      background: #fff;
+      padding: 0.2rem 0;
       i{
         position: absolute;
-        top:0.2rem;
-        left: 0.2rem;
+        top:50%;
+        left: 0.4rem;
         width: 0.4rem;
         height: 0.36rem;
         background: url("../image/search.png") no-repeat;
         background-size: contain;
+        transform: translateY(-50%);
       }
       input{
         border: 0;
         height: 0.8rem;
-        width: 100%;
+        width: 7.1rem;
         box-shadow: none;
         background-color: #eeeff3;
         border-radius: 0.2rem;
         box-sizing: border-box;
         padding-left: 0.8rem;
+        margin: 0 auto;
+        display: block;
+      }
+    }
+    .lc_container{
+      margin-top: 1.2rem;
+      .search_list{
+        border-top: 0.01rem solid #e5e5e5;
+        .search_lf{
+          position: fixed;
+          top: 1.2rem;
+          left: 0;
+          overflow: auto;
+          width: 1.55rem;
+          height: 100%;
+          background: #eeeff3;
+          ul{
+            width: 100%;
+            li{
+              width: 100%;
+              line-height: 0.88rem;
+              text-align: center;
+              cursor: pointer;
+              padding: 0 0.2rem;
+              box-sizing: border-box;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              border-bottom: 0.01rem solid #cecccc;
+              font-size: 0.26rem;
+            }
+          }
+        }
+        .search_rt{
+          position: fixed;
+          left: 1.55rem;
+          top: 1.2rem;
+          width:5.95rem ;
+          height: 100%;
+          overflow: auto;
+          background: #fff;
+          .search_rt_box{
+            width: 100%;
+            box-sizing: border-box;
+            padding: 0 0.2rem 0 0.3rem;
+            border-bottom: 0.01rem solid #e5e5e5;
+            margin-bottom: 0.3rem;
+            h1{
+              font-size: 0.3rem;
+              line-height: 0.6rem;
+            }
+            ul{
+              li{
+                cursor: pointer;
+                float: left;
+                padding: 0.15rem 0.25rem;
+                background: #eeeff3;
+                margin: 0 0.3rem 0.25rem 0;
+                border-radius: 0.1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  //视频中心
+  &.vc_box{
+    .lc_container{
+      .vc_title{
+        border-bottom: 0.01rem solid #dcdcdc;
+          li{
+            float: left;
+            width: 25%;
+            box-sizing: border-box;
+            cursor: pointer;
+            padding: 0.25rem;
+            font-size:0.3rem ;
+            text-align: center;
+            border-right: 0.01rem solid #e5e5e5;
+            &.type{
+              padding: 0.25rem 0.4rem 0.25rem 0.1rem;
+              position: relative;
+              i{
+                position: absolute;
+                top: 0.38rem;
+                right: 0.3rem;
+                width: 0.22rem;
+                height: 0.17rem;
+                background-size: contain;
+                background-repeat: no-repeat;
+              }
+            }
+            &:nth-child(3){
+              i{
+                background-image: url("../image/up-a.png");
+              }
+              &.down{
+                i{
+                  background-image: url("../image/down-a.png");
+                }
+              }
+            }
+            &:nth-child(4){
+              i{
+                background-image: url("../image/type-a.png");
+              }
+            }
+            &.active{
+              color:#2d50b6;
+              &:nth-child(3){
+                i{
+                  background-image: url("../image/up-b.png");
+                }
+                &.down{
+                  i{
+                    background-image: url("../image/down-b.png");
+                  }
+                }
+              }
+              &:nth-child(4){
+                i{
+                  background-image: url("../image/type-b.png");
+                }
+              }
+            }
+          }
       }
     }
   }
