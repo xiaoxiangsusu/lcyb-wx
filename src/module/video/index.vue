@@ -7,6 +7,23 @@
         <li :class="active==3 ? (priceType==1 ? 'active up':'active down'):''"  @click="priceSort" class="type">价格<i></i></li>
         <li :class="active==4 ? 'active':''"  @click="active=4" class="type">分类 <i></i></li>
       </ul>
+      <div class="lc_container_box">
+        <ul>
+          <li>
+            <a href="javascript:void(0)" class="clear">
+              <img src="" class="lf">
+              <div class="rt">
+                <p>排排排排排排排排排排排排排排排排排排排排排排排排排排排排排排排排排排排排</p>
+                <b>￥69.90</b>
+                <div class="rt">
+                  <span class="lf">666</span>
+                  <span class="lf">777</span>
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
     <lc_footer :state=2></lc_footer>
   </div>
@@ -22,6 +39,9 @@
     },
     components:{
       lc_footer
+    },
+    created(){
+      var that=this;
     },
     methods:{
       priceSort(){
