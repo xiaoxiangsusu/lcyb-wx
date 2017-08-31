@@ -1,27 +1,20 @@
 <template>
   <div id="lc_footer">
-    <ul class="clear">
-      <li :class="active==1 ? 'active':''" @click="active=1">
-        <router-link to="/index"><i class="footer_01"></i>首页</router-link>
-      </li>
-      <li :class="active==2 ? 'active':''" @click="active=2">
-        <router-link to="/videoCenter"><i class="footer_02" style="top: 0.2rem;"></i>视频中心</router-link>
-      </li>
-      <li :class="active==3 ? 'active':''" @click="active=3">
-        <router-link  to=""><i class="footer_03"></i>考试中心</router-link>
-      </li>
-      <li :class="active==4 ? 'active':''" @click="active=4">
-        <router-link to=""><i class="footer_04"></i>我的</router-link>
+    <ul>
+      <li v-for="item in list" :class="$route.path==item.path ? 'active':''">
+        <router-link :to="item.path"><img :src="$route.path==item.path ? item.img:item.imgActive" alt="">{{item.name}}</router-link>
       </li>
     </ul>
   </div>
 </template>
 <script>
+  import { routeList } from '@/router/index'
   export default({
     props:['state'],
     data(){
       return{
-        active:this.state
+        active:this.state,
+        list:routeList
       }
     },
     methods:{

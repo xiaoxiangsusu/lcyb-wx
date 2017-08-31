@@ -78,6 +78,7 @@
   import Mock from '@/assets/js/mock'
   import $ from 'jquery'
   import lc_footer from '@/components/index/footer'
+  import test from '@/utils/test'
   export default{
     data(){
       return{
@@ -100,6 +101,7 @@
      $.getJSON('http://jiaozi.com/notice',(res)=>{
        that.notice=res.data.notice;
      })
+      test.imgCode.call(this);
     },
     methods:{
 

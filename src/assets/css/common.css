@@ -68,6 +68,16 @@ body {
 #lc_footer ul li a i.footer_04 {
   background-image: url("../image/icon-04-a.png");
 }
+#lc_footer ul li a img {
+  position: absolute;
+  top: 0.1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0.46rem;
+  height: 0.41rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
 #lc_footer ul li.active a {
   color: #2d50b6;
 }
